@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Courses List</title>
 </head>
-<body>
+<body style="background-color: #F0A500; margin-left: 5%; margin-top: 5%">
     <h1>Courses List</h1>
 
     <ul>
         {% for course in courses %}
-        
-        <li>
-            <a href="{% url 'student_list' course.id %}">
-            {{ course.name }}
-            </a>
-        </li>
+        <br>
+        <div class="container" style="float:left">
+            <div class="row">
+                <div class="col">
+                <li>
+                    <a href="{% url 'student_list' course.id %}" style="color: #082032;">
+                    {{ course.name }}
+                    </a>
+                </div>
+                <div class="col">
+                    <a type="button" class="btn btn-light" href="{% url 'updateCourse' course.id %}" style="color: #082032;">
+                        Update
+                    </a>
+                </div>
+                </li>
+            </div>
+            <hr>
+        </div>
 
         {% endfor %}
         

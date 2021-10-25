@@ -8,8 +8,8 @@ from django.urls import reverse_lazy
 
 urlpatterns = [
     path('admin/', admin.site.urls, name = "index"),
-    path('', indexPage.index),
-    path('helloAgain/', indexPage.webPage, name = "helloAgain"),
+    path('', indexPage.My_name),
+    path('helloAgain/', indexPage.index, name = "helloAgain"),
     path('movies/', movieViews.list, name = "movieList"),
     path('movies/detail/<int:movie_id>', movieViews.detail, name = "movieList_details"),
     path('movies/createMovie', movieViews.createMovie, name = "createMovie"),
@@ -17,5 +17,5 @@ urlpatterns = [
     path('courses/list/', CoursesView.as_view(), name = "coursesList"),
     path('courses/create/', CreateCourseView.as_view(), name = "createCourse"),
     path('courses/<int:course_id>/students', StudentApiView.as_view(), name = "student_list"),
-    #path('courses/update/<slug:pk>/', UpdateCourseView.as_view(model = Course, success_url = reverse_lazy("coursesList")), name = "updateCourse"),
+    path('courses/update/<slug:pk>/', UpdateCourseView.as_view(model = Course, success_url = reverse_lazy("coursesList")), name = "updateCourse"),
 ]

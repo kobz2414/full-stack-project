@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-
 def index(request):
-    return HttpResponse("Hello World")
+    return HttpResponse('Hello!')
 
-def webPage(request):
-    return render(request, 'myApp/myApp.html')
+def My_name(request):
+    context = {
+        'name': 'Kobz'
+    }
+    return render(request, 'myApp/myApp.html', context)

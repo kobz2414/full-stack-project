@@ -13,6 +13,6 @@
     <h4>Date Release: {{ movie.date_released }}</h4>
     <h4>Date Created: {{ movie.date_created }}</h4>
     <br>
-    <a href="{% url 'updateMovie' movie.id %}" style="color: #082032;">Update Movie</a>
+    <a type="button" class="btn btn-light" href="{% url 'updateMovie' movie.id %}" style="color: #082032;">Update Movie</a>
 </body>
 </html>

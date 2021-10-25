@@ -13,7 +13,7 @@
     <ul>
         {% for course in courses %}
         <br>
-        <div class="container" style="float:left">
+        <div class="container" style="margin-left: 0">
             <div class="row">
                 <div class="col">
                 <li>
@@ -34,5 +34,7 @@
         {% endfor %}
         
     </ul>
+
+    <a type="button" class="btn btn-light" href="{% url 'createCourse' %}" style="margin-bottom: 5%; margin-top: 2%">Add a Course</a>
 </body>
 </html>

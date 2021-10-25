@@ -9,11 +9,21 @@
 </head>
 <body style="background-color: #F0A500">
     <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="col-md-auto" style="margin-top: 30%; margin-bottom: 30%">
-            <h1 style="color: #082032;">Hello and welcome {{ name }} !</h1>
-          </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-auto" style="margin-top: 30%;">
+          <h1 style="color: #082032;">Hello and welcome {{ name }} !</h1>
         </div>
       </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+          <a type="button" class="btn btn-light" href="{% url 'movieList' %}">Movies</a>
+          <a type="button" class="btn btn-light" href="{% url 'coursesList' %}">Courses</a>
+        </div>
+      </div>
+    </div>
+
 </body>
 </html>

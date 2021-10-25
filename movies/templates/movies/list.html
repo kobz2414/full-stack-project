@@ -12,10 +12,10 @@
     <ul>
         {% for movie in movies %}
         <li>
-            <a href="{% url 'movieList_details' movie.id %}" style="color: #082032;">{{ movie.date_released }}</a>
+            <a href="{% url 'movieList_details' movie.id %}" style="color: #082032;">{{ movie.title }} - {{ movie.date_released }}</a>
         </li>
         {% endfor %}
     </ul>
-    <a href="{% url 'createMovie' %}" style="color: #082032;">Create a Movie</a>
+    <a type="button" class="btn btn-light" href="{% url 'createMovie' %}" style="color: #082032;">Create a Movie</a>
 </body>
 </html>

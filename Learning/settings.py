@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-&fi2q==8))n^@*y#3=-@m9&aoy&3r)ru%3u&ljy*nvwmcj7np4
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    lkvmanagbanag-full-stack.herokuapp.com
+    'lkvmanagbanag-full-stack.herokuapp.com'
 ]
 
 
